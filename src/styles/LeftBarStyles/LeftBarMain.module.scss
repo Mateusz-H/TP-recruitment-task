@@ -1,0 +1,21 @@
+@import "./src/styles/variables";
+
+.leftBar {
+  background-color: $mainColor;
+  height: 100vh;
+  width: 5vw;
+  position: absolute;
+}
+.logo {
+  background-color: $backgroundColor;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 25%;
+  svg {
+
+  }
+}
+h1 {
+  color: red;
+}
