@@ -3,12 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 export const therapistsSlice = createSlice({
   name: "therapists",
   initialState: {
-    therapists: {},
+    therapists: [],
   },
   reducers: {
-    setTherapists: (state, action) => {
-      state.therapists = action.payload;
-    },
+    setTherapists: (state, action) => action.payload,
   },
 });
 

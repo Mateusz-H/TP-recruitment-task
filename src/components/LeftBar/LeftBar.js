@@ -1,8 +1,10 @@
 import { leftBar } from "../../styles/LeftBarStyles/LeftBarMain.module.scss";
 import { LeftBarLogo } from "./LeftBarLogo";
 
-export const LeftBar = () => (
-  <div className={leftBar}>
-    <LeftBarLogo />
-  </div>
-);
+export const LeftBar = () => {
+  return (
+    <div className={leftBar}>
+      <LeftBarLogo />
+    </div>
+  );
+};

@@ -1,3 +1,6 @@
+import store from "../store/store";
+import { therapistsSlice } from "../store/therapistsSlice";
+
 class TherapistsApi {
   constructor() {}
 
@@ -6,6 +9,11 @@ class TherapistsApi {
       .then((res) => res.json())
       .then((response) => {
         console.log(response);
+        store.dispatch(
+          therapistsSlice.actions.setTherapists(
+            Array.isArray(response.therapists) ? response.therapists : []
+          )
+        );
       });
   };
   getTherapistDetails = function (therapistsId) {

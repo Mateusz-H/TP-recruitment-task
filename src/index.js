@@ -5,7 +5,9 @@ import App from "./App";
 import store from "../src/store/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
-import "./styles/main.scss"
+import "./styles/main.scss";
+import {therapistsApi} from "./api/therapistsApi";
+therapistsApi.getTherapists();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
