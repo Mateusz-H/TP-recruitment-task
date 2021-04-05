@@ -1,13 +1,14 @@
 import {
-  tr,
   td,
   therapistsListSpan,
+  tr,
 } from "../../styles/TherapistsListStyles/TherapistsListMain.module.scss";
 import { TherapistsSpecializations } from "./TherpistsSpecializations";
 import { therapistsSlice } from "../../store/therapistsSlice";
 import store from "../../store/store";
 import { therapistsApi } from "../../api/therapistsApi";
 import { useSelector } from "react-redux";
+
 export const TherapistsListItem = ({ therapists }) => {
   const therapistDetailed = useSelector(
     (state) => state.therapists.therapistsDetailedList[therapists.therapistId]

@@ -1,18 +1,17 @@
 import {
+  closeButton,
+  overlay,
   sideBar,
   sideBarVisible,
-  overlay,
-  closeButton,
-  borderLine,
 } from "../../styles/SideBarStyles/SideBarMain.module.scss";
 import { useSelector } from "react-redux";
 import { therapistsSlice } from "../../store/therapistsSlice";
 import store from "../../store/store";
 import { SideBarSpecialistData } from "./SideBarSpecialistData";
-import { SideBarSpecialistDataButtons } from "./SideBarSpecialistDataButtons";
 import { mainWrapper } from "../../styles/SideBarStyles/SideBarSpecialistData.module.scss";
 import { useState } from "react";
-import {SideBarSpecialistEditData} from "./SideBarSpecialistEditData";
+import { SideBarSpecialistEditData } from "./SideBarSpecialistEditData";
+
 export const SideBar = () => {
   const close = () => {
     store.dispatch(therapistsSlice.actions.setSideBarStatus(false));
@@ -28,8 +27,10 @@ export const SideBar = () => {
           <div onClick={close}>×</div>
         </div>
         <div className={mainWrapper}>
-          {startEdit ? <SideBarSpecialistEditData close={openEditMenu}/> : (
-              <SideBarSpecialistData openEditMenu={openEditMenu}/>
+          {startEdit ? (
+            <SideBarSpecialistEditData close={openEditMenu} />
+          ) : (
+            <SideBarSpecialistData openEditMenu={openEditMenu} />
           )}
         </div>
       </div>

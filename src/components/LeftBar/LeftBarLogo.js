@@ -2,11 +2,7 @@ import { logo } from "../../styles/LeftBarStyles/LeftBarMain.module.scss";
 
 export const LeftBarLogo = () => (
   <div className={logo}>
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0)">
         <path
           d="M5.104 14.047H8.635V6.149"

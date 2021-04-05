@@ -45,9 +45,9 @@
   display: flex;
   &:first-child {
     span {
-      left:20%;
-      @media (max-width: 768px){
-        left:0%;
+      left: 20%;
+      @media (max-width: 768px) {
+        left: 0%;
       }
     }
   }
@@ -80,24 +80,24 @@
   flex-direction: row;
   align-items: center;
   border-bottom: $mainGray solid 1px;
-  padding:0.6% 0% 0.6% 0%;
+  padding: 0.6% 0% 0.6% 0%;
   img {
     width: 10%;
     border-radius: 50%;
     position: relative;
-    left:5%;
+    left: 5%;
   }
-  span{
+  span {
     font-weight: lighter;
   }
-  @media (max-width: 768px){
-    img{
-      width:0px;
+  @media (max-width: 768px) {
+    img {
+      width: 0px;
     }
     line-height: 1em;
     font-size: 0.8em;
   }
-  .tooltipText{
+  .tooltipText {
     visibility: hidden;
     background-color: $backgroundColor;
     color: black;
@@ -112,8 +112,8 @@
     transform: translateY(-110%);
     z-index: 5;
   }
-  &:hover{
-    .tooltipText{
+  &:hover {
+    .tooltipText {
       visibility: visible;
     }
   }
@@ -121,16 +121,15 @@
 .therapistsListSpan {
   position: relative;
   left: 10%;
-  @media (max-width: 768px){
-    left:0%;
+  @media (max-width: 768px) {
+    left: 0%;
   }
-  .spanInList{
-    &:after{
-      content:", "
+  .spanInList {
+    &:after {
+      content: ", ";
     }
-    &:last-child:after{
-      content:""
+    &:last-child:after {
+      content: "";
     }
   }
 }
-

@@ -2,7 +2,6 @@ import store from "../store/store";
 import { therapistsSlice } from "../store/therapistsSlice";
 
 class TherapistsApi {
-
   getTherapists = function () {
     fetch(process.env.REACT_APP_DEFAULT_API_URI, defaultPostConfig)
       .then((res) => res.json())
@@ -20,7 +19,7 @@ class TherapistsApi {
     return fetch(`${process.env.REACT_APP_DEFAULT_API_URI}/${therapistsId}`)
       .then((res) => res.json())
       .then((response) => {
-          console.log({response})
+        console.log({ response });
         store.dispatch(
           therapistsSlice.actions.addTherapistToDetailedList(response)
         );

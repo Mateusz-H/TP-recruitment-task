@@ -1,8 +1,9 @@
 import {
   buttonsWrapper,
-  saveButton,
   cancelButton,
+  saveButton,
 } from "../../styles/SideBarStyles/SideBarSpecialistDataButtons.module.scss";
+
 export const SideBarSpecialistEditDataButtons = ({ save, cancel }) => {
   return (
     <div className={buttonsWrapper}>

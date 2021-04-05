@@ -1,4 +1,4 @@
-.modalOverlay{
+.modalOverlay {
   z-index: 0;
   height: 100vh;
   width: 100vw;
@@ -6,37 +6,37 @@
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
 }
-.modalWindow{
+.modalWindow {
   position: absolute;
-  top: 15%; right: 50%;
-  transform: translate(50%,-15%);
+  top: 15%;
+  right: 50%;
+  transform: translate(50%, -15%);
   max-width: 600px;
-  width:25vw;
-  height:25vh;
+  width: 25vw;
+  height: 25vh;
   min-height: 250px;
   min-width: 250px;
-  box-shadow: 0 0 30px -5px rgba(245,245,245,0.2);
+  box-shadow: 0 0 30px -5px rgba(245, 245, 245, 0.2);
   background-color: white;
   border-radius: 5%;
   display: flex;
   flex-direction: column;
 }
-.modalHeader{
-
+.modalHeader {
 }
-.deleteConfirmationMain{
-  .spanHeader{
+.deleteConfirmationMain {
+  .spanHeader {
     font-weight: bold;
     font-size: 1.2em;
     padding-bottom: 2em;
   }
   padding-left: 2em;
   padding-right: 2em;
-place-items: center;
+  place-items: center;
   display: flex;
   flex-direction: column;
 }
-.modalButton{
+.modalButton {
   padding: 1em;
   text-align: right;
   cursor: pointer;

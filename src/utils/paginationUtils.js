@@ -10,20 +10,20 @@ export function getPagesRange(current, max) {
   return pages;
 }
 
-export function getSkippedPages(pages){
-    let lastIndex;
-    let skippedPages=[];
-    for (let i of pages) {
-        if (lastIndex) {
-            if (i - lastIndex === 2) {
-                skippedPages.push(lastIndex + 1);
-            } else if (i - lastIndex !== 1) {
-                skippedPages.push(0);
-            }
-        }
-        skippedPages.push(i);
-        lastIndex = i;
+export function getSkippedPages(pages) {
+  let lastIndex;
+  let skippedPages = [];
+  for (let i of pages) {
+    if (lastIndex) {
+      if (i - lastIndex === 2) {
+        skippedPages.push(lastIndex + 1);
+      } else if (i - lastIndex !== 1) {
+        skippedPages.push(0);
+      }
     }
+    skippedPages.push(i);
+    lastIndex = i;
+  }
 
-    return skippedPages;
+  return skippedPages;
 }

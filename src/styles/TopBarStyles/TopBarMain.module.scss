@@ -2,16 +2,16 @@
 
 .topBar {
   display: inline-block;
-  margin-left:$leftBarSize;
+  margin-left: $leftBarSize;
   width: 100vw - $leftBarSize;
   height: $topBarSize;
   background-color: white;
-  box-shadow: 1px 1px 8px #DDDDDD;
-  span{
+  box-shadow: 1px 1px 8px #dddddd;
+  span {
     font-weight: 600;
-    color:#52575c;
+    color: #52575c;
     font-size: 1.4em;
-    line-height:2em;
+    line-height: 2em;
     margin: 2vw;
   }
 }

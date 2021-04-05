@@ -1,9 +1,9 @@
 import {
   labeledInfo,
   labelStyled,
+  mainLabel,
   styledInput,
   styledTextarea,
-  mainLabel,
 } from "../../styles/SideBarStyles/SideBarSpecialistData.module.scss";
 import { useSelector } from "react-redux";
 import { useState } from "react";

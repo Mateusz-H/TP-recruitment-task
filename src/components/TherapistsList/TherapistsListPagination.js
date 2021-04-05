@@ -1,14 +1,15 @@
 import {
-  pagination,
   button,
-  paginationWrapper,
   buttonDisabled,
+  pagination,
+  paginationWrapper,
 } from "../../styles/TherapistsListStyles/TherapistsListPaginationMain.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { setPage, therapistsSlice } from "../../store/therapistsSlice";
+import { useSelector } from "react-redux";
+import { therapistsSlice } from "../../store/therapistsSlice";
 import store from "../../store/store";
 import { getPagesRange, getSkippedPages } from "../../utils/paginationUtils";
 import { TherapistsListPaginationPages } from "./TherapistsListPaginationPages";
+
 export const TherapistsListPagination = () => {
   const therapists = useSelector((state) => state.therapists.therapistsList);
   const listSize = useSelector((state) => state.therapists.therapistsListSize);
@@ -32,7 +33,7 @@ export const TherapistsListPagination = () => {
           {"<"}
         </div>
         <TherapistsListPaginationPages
-            currentPage={currentPage}
+          currentPage={currentPage}
           skippedPages={getSkippedPages(
             getPagesRange(currentPage, numberOfPages)
           )}

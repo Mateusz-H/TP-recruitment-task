@@ -1,9 +1,11 @@
 import ReactDOM from "react-dom";
 import {
-  modalOverlay,
   modalButton,
-    modalWindow,modalHeader
+  modalHeader,
+  modalOverlay,
+  modalWindow,
 } from "../../styles/ModalStyles/ModalMain.module.scss";
+
 export const Modal = ({ isShowing, hide, children }) =>
   isShowing
     ? ReactDOM.createPortal(

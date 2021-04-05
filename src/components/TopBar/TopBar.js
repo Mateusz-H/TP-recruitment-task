@@ -1,3 +1,7 @@
-import {topBar} from '../../styles/TopBarStyles/TopBarMain.module.scss'
+import { topBar } from "../../styles/TopBarStyles/TopBarMain.module.scss";
 
-export const TopBar =()=><div className={topBar}><span>Lista specjalistów</span></div>
+export const TopBar = () => (
+  <div className={topBar}>
+    <span>Lista specjalistów</span>
+  </div>
+);

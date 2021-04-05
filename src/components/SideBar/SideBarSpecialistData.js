@@ -3,10 +3,11 @@ import { SideBarSpecialistDataLabeledInfo } from "./SideBarSpecialistDataLabeled
 import { useSelector } from "react-redux";
 import { SideBarSpecialistDataButtons } from "./SideBarSpecialistDataButtons";
 import { Modal } from "../Modal/Modal";
-import {useState} from "react";
+import { useState } from "react";
 import store from "../../store/store";
-import {therapistsSlice} from "../../store/therapistsSlice";
-import {DeleteConfirmation} from "../DeleteConfirmation";
+import { therapistsSlice } from "../../store/therapistsSlice";
+import { DeleteConfirmation } from "../DeleteConfirmation";
+
 export const SideBarSpecialistData = ({ openEditMenu }) => {
   const selectedTherapist = useSelector(
     (state) =>
@@ -15,10 +16,10 @@ export const SideBarSpecialistData = ({ openEditMenu }) => {
       ]
   );
   const [closeModalStatus, setModalStatus] = useState(false);
-  const handleModalVisibility=(status)=>{
+  const handleModalVisibility = (status) => {
     setModalStatus(status);
-    store.dispatch(therapistsSlice.actions.setSideBarStatus(!status))
-  }
+    store.dispatch(therapistsSlice.actions.setSideBarStatus(!status));
+  };
   return selectedTherapist ? (
     <>
       <span className={mainLabel}>Informacje o specjaliście</span>
@@ -42,9 +43,15 @@ export const SideBarSpecialistData = ({ openEditMenu }) => {
         label={"O mnie"}
         data={selectedTherapist.aboutMe}
       />
-      <SideBarSpecialistDataButtons deleteConfirmation={handleModalVisibility}  edit={openEditMenu} />
-      <Modal isShowing={closeModalStatus} hide={() => handleModalVisibility(false)}>
-          <DeleteConfirmation hideSelf={() => handleModalVisibility(false)}/>
+      <SideBarSpecialistDataButtons
+        deleteConfirmation={handleModalVisibility}
+        edit={openEditMenu}
+      />
+      <Modal
+        isShowing={closeModalStatus}
+        hide={() => handleModalVisibility(false)}
+      >
+        <DeleteConfirmation hideSelf={() => handleModalVisibility(false)} />
       </Modal>
     </>
   ) : null;

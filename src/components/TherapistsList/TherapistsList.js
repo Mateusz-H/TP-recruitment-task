@@ -1,12 +1,12 @@
 import {
-  therapistsListMain,
   table,
-  thead,
   th,
+  thead,
+  therapistsListMain,
   therapistsListSpan,
 } from "../../styles/TherapistsListStyles/TherapistsListMain.module.scss";
 import { TherapistsListMapper } from "./TherapistsListMapper";
-import {TherapistsListPagination} from "./TherapistsListPagination";
+import { TherapistsListPagination } from "./TherapistsListPagination";
 
 export const TherapistsList = () => (
   <div className={therapistsListMain}>
@@ -20,8 +20,7 @@ export const TherapistsList = () => (
         </div>
       </div>
       <TherapistsListMapper />
-      <TherapistsListPagination/>
-
+      <TherapistsListPagination />
     </div>
   </div>
 );

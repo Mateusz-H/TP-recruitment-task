@@ -32,15 +32,15 @@ export const therapistsSlice = createSlice({
       };
     },
     removeTherapist: (state, action) => {
-      const tmpDetailedList = {...state.therapistsDetailedList};
-      const tmpList = {...state.therapistsList};
+      const tmpDetailedList = { ...state.therapistsDetailedList };
+      const tmpList = { ...state.therapistsList };
       delete tmpDetailedList[action.payload];
       delete tmpList[action.payload];
       return {
         ...state,
         therapistsDetailedList: { ...tmpDetailedList },
         therapistsList: { ...tmpList },
-        selectedTherapist:null,
+        selectedTherapist: null,
         sideBarVisible: false,
       };
     },
