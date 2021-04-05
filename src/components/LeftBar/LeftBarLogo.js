@@ -3,8 +3,7 @@ import { logo } from "../../styles/LeftBarStyles/LeftBarMain.module.scss";
 export const LeftBarLogo = () => (
   <div className={logo}>
     <svg
-      width="155"
-      viewBox="-5 -5 145 33"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

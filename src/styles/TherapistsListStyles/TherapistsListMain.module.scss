@@ -1,0 +1,113 @@
+@import "./src/styles/variables";
+
+.therapistsListMain {
+  margin-left: $leftBarSize;
+  width: 100vw - $leftBarSize;
+  height: 100vh - $topBarSize;
+}
+.table {
+  position: relative;
+  width: 96%;
+  left: 2%;
+  top: 4%;
+  height: 90%;
+  background-color: white;
+  //box-shadow: 0px 0px 0px 1px #fff inset;
+  border: #999 solid 1px;
+  border-radius: 5px;
+  hyphens: auto;
+  overflow-y: auto;
+}
+.thead {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #f9f9fa;
+  height: 7.5%;
+  min-height: 45px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  div:first-child {
+    width: $tableColumnRatioSize;
+    border-right: #999 solid 1px;
+    min-width: 120px;
+  }
+  div:nth-of-type(2) {
+    width: 100%-$tableColumnRatioSize;
+  }
+}
+.th {
+  border-bottom: #999 solid 1px;
+  font-weight: 500;
+  color: black;
+  font-size: 1.2em;
+  align-items: center;
+  display: flex;
+  &:first-child {
+    span {
+      left:20%;
+      @media (max-width: 768px){
+        left:0%;
+      }
+    }
+  }
+}
+.tbody {
+  display: flex;
+  flex-direction: column;
+  height: 77%;
+  word-wrap: anywhere;
+}
+.tr {
+  height: 9.09%;
+  min-height: 45px;
+
+  display: flex;
+  flex-direction: row;
+  div:first-child {
+    width: $tableColumnRatioSize;
+    border-right: #999 solid 1px;
+    min-width: 120px;
+  }
+  div:nth-of-type(2) {
+    width: 100%-$tableColumnRatioSize;
+  }
+}
+.td {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: #999 solid 1px;
+  padding:0.6% 0% 0.6% 0%;
+  img {
+    width: 10%;
+    border-radius: 50%;
+    position: relative;
+    left:5%;
+  }
+  span{
+    font-weight: lighter;
+  }
+  @media (max-width: 768px){
+    img{
+      width:0px;
+    }
+    line-height: 1em;
+    font-size: 0.8em;
+  }
+}
+.therapistsListSpan {
+  position: relative;
+  left: 10%;
+  @media (max-width: 768px){
+    left:0%;
+  }
+  span{
+    &:after{
+      content:", "
+    }
+    &:last-child:after{
+      content:""
+    }
+  }
+}

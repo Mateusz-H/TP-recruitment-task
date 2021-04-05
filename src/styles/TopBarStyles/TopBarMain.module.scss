@@ -1,0 +1,17 @@
+@import "./src/styles/variables";
+
+.topBar {
+  display: inline-block;
+  margin-left:$leftBarSize;
+  width: 100vw - $leftBarSize;
+  height: $topBarSize;
+  background-color: white;
+  box-shadow: 1px 1px 8px #DDDDDD;
+  span{
+    font-weight: 600;
+    color:#52575c;
+    font-size: 1.4em;
+    line-height:2em;
+    margin: 2vw;
+  }
+}
