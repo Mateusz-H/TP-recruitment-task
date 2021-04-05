@@ -13,7 +13,7 @@ export const TherapistsListPagination = () => {
   const therapists = useSelector((state) => state.therapists.therapistsList);
   const listSize = useSelector((state) => state.therapists.therapistsListSize);
   const currentPage = useSelector((state) => state.therapists.currentPage);
-  const numberOfPages = Math.ceil(therapists.length / listSize);
+  const numberOfPages = Math.ceil(Object.keys(therapists).length / listSize);
   const prevPage = () => {
     if (currentPage - 1 > 0)
       store.dispatch(therapistsSlice.actions.setPage(currentPage - 1));
@@ -22,7 +22,6 @@ export const TherapistsListPagination = () => {
     if (currentPage + 1 <= numberOfPages)
       store.dispatch(therapistsSlice.actions.setPage(currentPage + 1));
   };
-
   return (
     <div className={paginationWrapper}>
       <div className={pagination}>

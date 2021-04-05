@@ -1,0 +1,49 @@
+@import "src/styles/variables";
+
+.mainWrapper{
+  position: relative;
+  top:5%;
+  left:5%;
+  width: 80%;
+  .mainLabel{
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+    padding-bottom: 1em;
+}
+.labeledInfo{
+  .labelStyled{
+    display:block;
+    margin-top:2em;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    color:$darkerGray;
+  }
+  .infoStyled{
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .spanInList{
+    &:after{
+      content:", "
+    }
+    &:last-child:after{
+      content:""
+    }
+  }
+  .spanInBlock{
+    display: inline-block;
+  }
+}
+.styledInput{
+  padding: 0.7em;
+  width:90%;
+  border-radius: 5px;
+  border:$mainGray 1px solid;
+  outline: none;
+}
+.styledTextarea{
+  @extend .styledInput;
+  height: 25vh;
+  margin-bottom:2em;
+}

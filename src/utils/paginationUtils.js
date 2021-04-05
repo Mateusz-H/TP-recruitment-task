@@ -3,7 +3,7 @@ export function getPagesRange(current, max) {
   let right = current + 3;
   let pages = [];
   for (let i = 1; i <= max; i++) {
-    if (i == 1 || i == max || (i >= left && i < right)) {
+    if (i === 1 || i === max || (i >= left && i < right)) {
       pages.push(i);
     }
   }

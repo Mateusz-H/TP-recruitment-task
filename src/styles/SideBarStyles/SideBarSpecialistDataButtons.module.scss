@@ -1,0 +1,50 @@
+@import "src/styles/variables";
+
+.buttonsWrapper{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom:25%;
+  .button{
+    margin-right: 10%;
+    padding: 0.5em 1.2em 0.5em 1.2em;
+    border-radius: 10%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+      color:white;
+    }
+  }
+  .editButton{
+    @extend .button;
+    border:1px solid $mainColor;
+    color:$mainColor;
+    &:hover{
+      background-color: $mainColor;
+    }
+  }
+  .deleteButton{
+    @extend .button;
+    border:1px solid red;
+    color:red;
+    &:hover{
+      background-color: red;
+    }
+  }
+  .saveButton{
+    @extend .button;
+    color:white;
+    background-color: $mainColor;
+  }
+  .cancelButton{
+    @extend .button;
+    border:1px solid $mainColor;
+    color:$mainColor;
+    &:hover{
+      color:white;
+      background-color: $mainColor;
+    }
+  }
+}
