@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+.paginationWrapper {
+  position: relative;
+  justify-content: center;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  position: relative;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.button {
+  cursor: pointer;
+  border: #999 solid 1px;
+  border-radius: 10%;
+  width: 2em;
+  height: 2em;
+  place-items: center;
+  justify-content: center;
+  display: flex;
+  color: black;
+  &:hover {
+    border: $mainColor solid 1px;
+    color: $mainColor;
+  }
+}
+.buttonDisabled {
+  @extend .button;
+  color: #999;
+  cursor: not-allowed;
+  border: none;
+  &:hover {
+    border: none;
+    color: #999;
+  }
+}
+.buttonCurrent {
+  @extend .button;
+  color: white;
+  background-color: $mainColor;
+  border: $mainColor solid 1px;
+  cursor: not-allowed;
+  &:hover {
+    color: white;
+  }
+}
+.skippedButton {
+  @extend .button;
+  border: none;
+  cursor: auto;
+  &:hover {
+    border: none;
+    color: black;
+  }
+}

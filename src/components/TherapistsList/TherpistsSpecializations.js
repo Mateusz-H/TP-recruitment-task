@@ -19,4 +19,4 @@ export const TherapistsSpecializations = ({ id, specializations }) => {
         {specializations.length>3?"...":null}
     </div>
   );
-};
+}
