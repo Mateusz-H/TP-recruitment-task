@@ -14,7 +14,7 @@ export const TherapistsListMapper = () => {
   return (
     <div className={tbody}>
       {therapists.map((therapist) => {
-        return <TherapistsListItem therapists={therapist} />;
+        return <TherapistsListItem key={therapist.therapistId} therapists={therapist} />;
       })}
     </div>
   );

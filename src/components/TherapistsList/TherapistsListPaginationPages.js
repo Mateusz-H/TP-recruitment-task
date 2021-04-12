@@ -15,16 +15,17 @@ export const TherapistsListPaginationPages = ({
   };
   return (
     <>
-      {skippedPages.map((page) => {
+      {skippedPages.map((page,index) => {
         return page > 0 ? (
           <div
+              key={index}
             onClick={setPage(page)}
             className={page === currentPage ? buttonCurrent : button}
           >
             {page}
           </div>
         ) : (
-          <div className={skippedButton}>...</div>
+          <div key={index} className={skippedButton}>...</div>
         );
       })}
     </>

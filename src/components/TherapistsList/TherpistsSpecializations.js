@@ -15,7 +15,7 @@ export const TherapistsSpecializations = ({ id, specializations }) => {
         </span>
       ) : null}
       {specializations.slice(0, 3).map((x) => {
-        return <span className={spanInList}>{x}</span>;
+        return <span key={x} className={spanInList}>{x}</span>;
       })}
       {specializations.length > 3 ? "..." : null}
     </div>
